@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>National P.G. College</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-black social-header text-white flex justify-between items-center p-2">
+    <div class="flex gap-4">
+      <a href="https://www.linkedin.com/school/national-pg-college/" target="_blank" title="LinkedIn" class="w-8 h-8 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-white hover:bg-opacity-30 transition duration-300"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/npgcin" target="_blank" title="Facebook" class="w-8 h-8 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-white hover:bg-opacity-30 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.youtube.com/@npgcin14" target="_blank" title="YouTube" class="w-8 h-8 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-white hover:bg-opacity-30 transition duration-300"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/npgcin?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" title="Instagram" class="w-8 h-8 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-white hover:bg-opacity-30 transition duration-300"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="flex items-center text-sm font-medium">
+      <span id="date-time" class="text-white"></span>
+    </div>
+  </div>
+
+  <header class="bg-white bg-opacity-90 py-4 px-6 border-b-4 border-red-900 relative">
+    <div class="absolute inset-0 bg-white bg-opacity-80"></div>
+    <div class="max-w-6xl mx-auto flex justify-between items-center relative z-10">
+      <img src="assets/logo-left.png" alt="NPGC Logo" class="responsive-logo" >
+      <div class="text-center flex-grow px-4">
+        <img src="assets/clg mid.png" alt="National Post Graduate College" class="mx-auto mb-2" style="max-width: 100%; height: auto;">   
+      </div>
+      <img src="assets/logo-right.png" alt="NPGC Right Logo" class="responsive-logo">
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Us</a>
+          <ul class="sub-menu">
+            <li><a href="NavSections/AboutUs/About-us/thecollege.html">The College</a></li>
+            <li><a href="NavSections/AboutUs/About-us/vision-mission.html">Vision and Mission</a></li>
+            <li><a href="NavSections/AboutUs/About-us/principal-desk.html">Principal's Desk</a></li>
+            <li><a href="NavSections\Exam&Ass\Exam&Ass.html">Examination & Assessments</a></li>
+            <li><a href="#">Administrations and Committees</a></li>
+            <li><a href="NavSections/AboutUs/About-us/annual_reports.html">Annual Reports</a></li>
+            <li><a href="NavSections/AboutUs/About-us/accreditations-ranking.html">Accreditations & Ranking</a></li>
+            <li><a href="NavSections/AboutUs/About-us/infrastructure.html">Infrastructure & Facilities</a></li>
+          </ul>
+        </li>
+        <li><a href="#academics">Academics</a>
+          <ul class="sub-menu">
+            <li><a href="./NavSections/Academics/index.html">Programs Offered</a></li>
+            <li><a href="./NavSections/Faculty&Dev/Faculty&Dev.html">Departments & Faculties</a></li>
+            <li><a href="./NavSections/Syllabus/syllabus.html">Syllabus</a></li>
+            <li><a href="./NavSections/AcademicCalendar/academicCalendar.html">Academic Calendar</a></li>
+            <li><a href="./NavSections/ClassSchedule/classSchedule.html">Class Schedule</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Distance Learning Centers</a></li>
+          </ul>
+        </li>
+        <li><a href="#admissions">Admissions</a>
+          <ul class="sub-menu">
+            <li><a href="#">Prospectus</a></li>
+            <li><a href="#">Admission Schedule</a></li>
+            <li><a href="#">Eligibility Criteria</a></li>
+            <li><a href="#">Admission Procedure</a></li>
+            <li><a href="#">Seats Offered</a></li>
+            <li><a href="#">Apply Online</a></li>
+          </ul>
+        </li>
+        <li><a href="#library">Library</a>
+          <ul class="sub-menu">
+            <li><a href="NavSections\Library\Library\about-library.html">About the Library</a></li>
+            <li><a href="NavSections\Library\Library\library-rules.html">Rules</a></li>
+            <li><a href="#">N-Lists</a></li>
+            <li><a href="#">OPAC</a></li>
+          </ul>
+        </li>
+        <li><a href="#facilities">Facilities</a>
+          <ul class="sub-menu">
+            <li><a href="./NavSections/Facilities/Infrastructure/index.html">Infrastructure</a></li>
+            <li><a href="./NavSections/Facilities/Hostel/index.html">Hostel</a></li>
+            <li><a href="./NavSections/Facilities/Canteen/index.html">Canteen</a></li>
+            <li><a href="./NavSections/Facilities/Laboratories/index.html">Laboratory</a></li>
+            <li><a href="./NavSections/Facilities/Library/index.html">Library</a></li>
+            <li><a href="./NavSections/Facilities/Medical/index.html">Medical</a></li>
+            <li><a href="./NavSections/Facilities/Sports and Games/index.html">Sports</a></li>
+            <li><a href="./NavSections/Facilities/Student Units/index.html">Student Units</a></li>
+          </ul>
+        </li>
+        <li><a href="#examinations">Examinations</a>
+          <ul class="sub-menu">
+            <li><a href="./NavSections/Exam&Ass/Exam&Ass.html">Examination & Assessments</a></li>
+            <li><a href="#">Examination Forms</a></li>
+            <li><a href="#">Examination Schedule</a></li>
+            <li><a href="#">Examination Results</a></li>
+            <li><a href="#">Online Services (EASE) – Migration & Degree</a></li>
+          </ul>
+        </li>
+        <li><a href="#students">Students</a>
+          <ul class="sub-menu">
+            <li><a href="#">Online Fees Payment</a></li>
+            <li><a href="About Us/Syllabus/syllabus.html">Syllabus</a></li>
+            <li><a href="#">Student Grievance</a></li>
+            <li><a href="#">Scholarships</a></li>
+          </ul>
+        </li>
+        <li><a href="#media">Media</a>
+          <ul class="sub-menu">
+            <li><a href="#">Social Media</a></li>
+            <li><a href="./NavSections/News/news.html">News</a></li>
+          </ul>
+        </li>
+        <li><a href="./NavSections/Contact/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="relative hero text-white py-10 md:py-20 px-10 text-center min-h-[50vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden" id="home">
+    <div class="absolute inset-0">
+      <!-- <img src="assets/hero-campus.jpg" alt="Campus" class="w-full h-full object-cover"> -->
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-red-900 via-black to-red-900 opacity-70"></div>
+
+
+    <div class="relative z-10 max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 text-shadow-lg">Welcome to National P. G. College</h1>
+      <p class="text-xl md:text-2xl mb-10 opacity-90">We Design the Future and Set Trends for Others to Follow</p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <button class="bg-gradient-to-r from-red-900 to-black text-white px-8 py-4 rounded-lg font-semibold hover:from-red-800 hover:to-gray-900 transition duration-300 shadow-lg transform hover:scale-105">Apply Now</button>
+        <a href="About Us/Academics/index.html" class="bg-white bg-opacity-20 text-white px-8 py-4 rounded-lg font-semibold border-2 border-white hover:bg-opacity-30 transition duration-300 shadow-lg transform hover:scale-105 inline-block">Explore Programs</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-20 px-10">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-red-800 mb-12 text-left">Latest @ NPGC</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <div class="bg-gradient-to-r from-black to-red-700 text-white px-6 py-3 text-sm font-bold text-center">JAN 24</div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-red-800 mb-3">Placement: NextHire</h3>
+            <p class="text-gray-600 mb-4">New placement opportunity with NextHire for eligible students</p>
+            <a href="#" class="text-red-600 font-semibold hover:text-red-800 transition duration-300">Read More →</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <div class="bg-gradient-to-r from-black to-red-900 text-white px-6 py-3 text-sm font-bold text-center">DEC 27</div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-red-800 mb-3">Semester Fees Notice</h3>
+            <p class="text-gray-600 mb-4">Important notice regarding semester fee payment deadline</p>
+            <a href="#" class="text-red-600 font-semibold hover:text-red-800 transition duration-300">Read More →</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <div class="bg-gradient-to-r from-black to-red-700 text-white px-6 py-3 text-sm font-bold text-center">DEC 26</div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-red-800 mb-3">Orientation Program</h3>
+            <p class="text-gray-600 mb-4">Orientation program for Ph.D Students scheduled</p>
+            <a href="#" class="text-red-600 font-semibold hover:text-red-800 transition duration-300">Read More →</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <div class="bg-gradient-to-r from-black to-red-700 text-white px-6 py-3 text-sm font-bold text-center">DEC 26</div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-red-800 mb-3">Orientation Program</h3>
+            <p class="text-gray-600 mb-4">Orientation program for Ph.D Students scheduled</p>
+            <a href="#" class="text-red-600 font-semibold hover:text-red-800 transition duration-300">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="notices-section">
+    <div class="container">
+      <h2 class="section-title">Important Notices</h2>
+      <div class="notices-grid">
+        <div class="notice-card">
+          <div class="notice-date">DEC 27</div>
+          <h3 class="notice-title">Semester Fees Notice</h3>
+          <p class="notice-description">Important notice regarding semester fee payment deadline</p>
+        </div>
+        <div class="notice-card">
+          <div class="notice-date">DEC 26</div>
+          <h3 class="notice-title">Orientation program for Ph.D Students</h3>
+          <p class="notice-description">Orientation program scheduled for Ph.D students</p>
+        </div>
+        <div class="notice-card">
+          <div class="notice-date">DEC 24</div>
+          <h3 class="notice-title">Scholarship notice</h3>
+          <p class="notice-description">Details about available scholarships</p>
+        </div>
+        <div class="notice-card">
+          <div class="notice-date">DEC 21</div>
+          <h3 class="notice-title">Holiday Notice: Christmas</h3>
+          <p class="notice-description">College will be closed for Christmas holiday</p>
+        </div>
+        <div class="notice-card">
+          <div class="notice-date">DEC 20</div>
+          <h3 class="notice-title">Commencement of classes</h3>
+          <p class="notice-description">Classes will commence as per schedule</p>
+        </div>
+      </div>
+      <a href="#" class="view-all-btn">View All Important Notices →</a>
+    </div>
+  </section>
+
+  <section class="placement-section">
+    <div class="container">
+      <h2 class="section-title">Placements at a Glance</h2>
+      <div class="placement-grid">
+        <div class="placement-card">
+          <span class="placement-date">JAN 24</span>
+          <h3>Placement: NextHire</h3>
+        </div>
+        <div class="placement-card">
+          <span class="placement-date">JAN 18</span>
+          <h3>Placement: Genpact</h3>
+        </div>
+        <div class="placement-card">
+          <span class="placement-date">DEC 31</span>
+          <h3>Placement: HCL Tech</h3>
+        </div>
+        <div class="placement-card">
+          <span class="placement-date">DEC 30</span>
+          <h3>Placement: Stanza Living</h3>
+        </div>
+      </div>
+      <a href="#" class="view-all-btn">View All Placement Updates →</a>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-gray-50 via-white to-gray-50 py-20 px-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-r from-black-700 to-red-900 rounded-2xl opacity-20 transform rotate-3"></div>
+          <img src="assets/principal.jpg" alt="Principal" class="relative w-full h-96 object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500" />
+          <div class="absolute bottom-4 left-4 bg-white bg-opacity-90 px-4 py-2 rounded-lg shadow-lg">
+            <p class="text-red-800 font-bold">Prof. Devendra Kumar Singh</p>
+            <p class="text-gray-600 text-sm">Principal</p>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <h2 class="text-4xl font-bold text-red-800 mb-6">Principal's Message</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-red-500 to-red-700 rounded-full"></div>
+          <p class="text-gray-700 text-lg leading-relaxed">
+            Education today is not limited to textbooks and classrooms. It is about building
+            character, nurturing curiosity, encouraging innovation, and preparing every learner
+            for the challenges of the modern world. At our college, we strive to create an
+            environment where each student feels inspired to learn, motivated to grow, and
+            confident to achieve success—both in professional and personal life.
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-red-700 rounded-full flex items-center justify-center">
+              <i class="fas fa-quote-left text-white"></i>
+            </div>
+            <div>
+              <p class="font-bold text-gray-800">Prof. Devendra Kumar Singh</p>
+              <p class="text-red-600">Principal, National P.G. College</p>
+            </div>
+          </div>
+          <a href="#" class="inline-block bg-gradient-to-r from-red-500 to-red-700 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-red-800 transition duration-300 shadow-lg transform hover:scale-105">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quicklinks-section">
+    <div class="container">
+      <h2 class="section-title">Quick Links</h2>
+      <div class="links-grid">
+        <a href="About Us/AcademicCalendar/academicCalendar.html" class="link-btn">Academic Calendar</a>
+        <a href="About Us/Academics/index.html" class="link-btn">Programs Offered</a>
+        <a href="About Us/Exam&Ass/Exam&Ass.html" class="link-btn">Examination Forms</a>
+        <a href="#" class="link-btn">Examination Result</a>
+        <a href="About Us/Faculty&Dev/Faculty&Dev.html" class="link-btn">Faculty Zone</a>
+        <a href="#" class="link-btn">Research</a>
+      </div>
+    </div>
+  </section>
+  <section class="bg-gradient-to-br from-red-50 via-white to-red-50 py-20 px-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-red-800 mb-4">Our Achievements</h2>
+        <p class="text-gray-600 text-lg">Numbers that speak for themselves</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-110 transition duration-500 hover:shadow-2xl border-t-4 border-red-500">
+          <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-red-700 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-book text-white text-2xl"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-red-800 mb-2 stat-number" data-target="35">0</h3>
+          <p class="text-gray-600 font-semibold">Programs</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-110 transition duration-500 hover:shadow-2xl border-t-4 border-blue-500">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-building text-white text-2xl"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-blue-800 mb-2 stat-number" data-target="22">0</h3>
+          <p class="text-gray-600 font-semibold">Departments</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-110 transition duration-500 hover:shadow-2xl border-t-4 border-green-500">
+          <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-users text-white text-2xl"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-green-800 mb-2 stat-number" data-target="6500">0</h3>
+          <p class="text-gray-600 font-semibold">Students</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-110 transition duration-500 hover:shadow-2xl border-t-4 border-purple-500">
+          <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-purple-800 mb-2 stat-number" data-target="100">0</h3>
+          <p class="text-gray-600 font-semibold">Faculties</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <iframe
+    src="http://localhost:3000"
+    width="380"
+    height="620",
+    allowtransparency="true"
+    title="Hi There!! I am NPGC Assistant - Click to get help with admissions, courses, faculty, and more!"
+    style="
+      background: transparent;
+      border:none;
+      position:fixed;
+      bottom: 1%;
+      right:1%;
+      border-radius:10px;
+      z-index: 100;">
+  </iframe>
+
+  <!-- NEWS SCROLLER BUTTON -->
+  <button id="newsBtn" aria-label="Toggle News" style="position: fixed; bottom: 1%; left: 1%; width: 56px; height: 56px; border-radius: 50%; border: none; font-size: 22px; cursor: pointer; color: #fff; background: linear-gradient(135deg, #8b0000, #2b2b2b); box-shadow: 0 4px 14px rgba(0,0,0,0.5); z-index: 10000;">📰</button>
+
+  <!-- NEWS PANEL -->
+  <div id="newsPanel" class="open">
+    <div class="news-header">Latest News</div>
+    <div class="news-body">
+      <div class="news-track">
+        <ul>
+          <li>Workshop on Data Science – Register Now</li>
+          <li>Annual Cultural Fest Dates Announced</li>
+          <li>Admissions Open for Session 2026–27</li>
+          <li>NAAC Peer Team Visit Scheduled</li>
+          <li>Semester Exams Begin from March 10</li>
+          <li>National Seminar on AI – Feb 15</li>
+          <li>Placement Drive for Final Year Students</li>
+          <li>Library Timings Extended During Exams</li>
+          <li>Scholarship Forms Deadline Extended</li>
+        </ul>
+        <!-- DUPLICATE FOR SEAMLESS LOOP -->
+        <ul>
+          <li>Workshop on Data Science – Register Now</li>
+          <li>Annual Cultural Fest Dates Announced</li>
+          <li>Admissions Open for Session 2026–27</li>
+          <li>NAAC Peer Team Visit Scheduled</li>
+          <li>Semester Exams Begin from March 10</li>
+          <li>National Seminar on AI – Feb 15</li>
+          <li>Placement Drive for Final Year Students</li>
+          <li>Library Timings Extended During Exams</li>
+          <li>Scholarship Forms Deadline Extended</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>About NPGC</h4>
+        <p>
+          National P.G. College<br>
+          2, Rana Pratap Marg<br>
+          Lucknow 226001, India
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Important Links</h4>
+        <ul>
+          <li><a href="#">University of Lucknow</a></li>
+          <li><a href="#">Ministry of Education</a></li>
+          <li><a href="#">UGC</a></li>
+          <li><a href="#">NAAC</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Contact</h4>
+        <p>
+          Phone: +91 522 4021304<br>
+          Email: support@npgc.in
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Our Location</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.5!2d80.9409029!3d26.8567355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd0a819131cb:0x11553d04f3a32d9c!2sNational%20Post%20Graduate%20College!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin" width="100%" height="100" style="border: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 National P.G. College. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="News Scroller/script.js"></script>
+</body>
+</html>
+

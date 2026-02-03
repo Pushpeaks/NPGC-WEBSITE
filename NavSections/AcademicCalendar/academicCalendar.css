@@ -1,0 +1,495 @@
+:root {
+  --primary: #ff5733;
+  --primary-soft: rgba(167, 24, 55, 0.15);
+  --bg-soft: #a718370d;
+  --text-dark: #1f2937;
+  --text-muted: #4a5565;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------------- RESET ---------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--text-dark);
+  background: #fff;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER WITH LOGO
+   ========================= */
+
+.header {
+  /* background: rgba(255, 255, 255, 0.9) url('assets/hero-campus.jpg') no-repeat center center; */
+  background-size: cover;
+  padding: 20px 40px;
+  border-bottom: 2px solid #e74c3c;
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.363);
+  z-index: 1;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.college-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.college-info h1 {
+  font-size: 28px;
+  color: var(--primary-maroon);
+  margin: 0;
+  font-weight: 700;
+}
+
+.college-info .tagline {
+  color: var(--text-light);
+  font-size: 14px;
+  margin: 5px 0 0 0;
+  font-style: italic;
+}
+
+.accreditation {
+  text-align: right;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.accreditation .autonomous {
+  color: var(--primary-maroon);
+  font-weight: 600;
+}
+
+/* =========================
+   NAVIGATION BAR
+   ========================= */
+
+.navbar {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+}
+
+.nav-menu a {
+  color: rgba(255, 255, 255, 0.493);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 8px 0;
+  position: relative;
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #00000083;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.nav-menu a:hover {
+  color: #ffffff;
+}
+
+.nav-menu a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.line {
+        height: 2px;
+        background-color: #008000; /* Green line */
+        width: 100px;
+        margin: 0 10px;
+    }
+.sub-menu {
+  position: absolute;
+  top: 37px;
+  left: 0;
+  background: linear-gradient(90deg, #31313198 0%, #000000a4 50%, #1a1a1a 100%);
+  min-width: 250px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px) scale(0.95);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.991);
+  border-radius: 0 0 8px 8px;
+  z-index: 1000;
+}
+
+.nav-menu li:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.sub-menu li {
+  display: block;
+  margin: 0;
+}
+
+.sub-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sub-menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding-left: 25px;
+}
+
+.sub-menu a::after {
+  display: none;
+}
+
+/* =========================
+   HERO SECTION 
+   ========================= */
+.hero-section {
+    position: relative;
+    padding: 120px 0 80px 0;
+    background: url('../Academics/assets/course.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gradient-overlay-v {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+    to right,
+    rgba(69, 10, 10, 0.8) 0%,
+    rgba(0, 0, 0, 0.75) 40%,
+    rgba(69, 10, 10, 0.8) 100%
+  );
+    z-index: 1;
+}
+
+.z-3 { z-index: 3 !important; }
+
+/* Typography */
+.main-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    font-size: clamp(4rem, 10vw, 7.5rem);
+    line-height: 0.85;
+    background: linear-gradient(to bottom, #ffffff 30%, #ff1f1f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -3px;
+}
+
+.main-description {
+    max-width: 650px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.btn-menu {
+    background-color: transparent;
+    color: #fff!important;
+    border: 2px solid rgba(255, 255, 255, 0.8)!important;
+    transition: all 0.4s ease-in-out!important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-menu:hover {
+    background: linear-gradient(to bottom, #ff5733 0%, #e64a19 100%) !important;
+    border-color: #ff5733!important;
+    color: #fff!important;
+    box-shadow: 0 8px 15px rgba(230, 74, 25, 0.4);
+}
+
+
+/* ---------------- SCROLL REVEAL ---------------- */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    animation: reveal 0.9s ease forwards;
+    animation-timeline: view();
+    animation-range: entry 15% cover 40%;
+  }
+
+  @keyframes reveal {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+/* ---------------- MAIN SECTION ---------------- */
+.main {
+  background-color: var(--bg-soft);
+  padding: clamp(20px, 4vw, 60px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 5vw, 48px);
+  align-items: center;
+}
+
+.main h1 {
+  font-size: clamp(22px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+
+/* ---------------- GRID ---------------- */
+.calenders-grid {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(16px, 3vw, 28px);
+}
+
+/* ---------------- CARD ---------------- */
+.card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 31, 31, 0.4);
+}
+
+/* ---------------- CARD IMAGE ---------------- */
+
+
+.card img {
+    width: 100%;
+    height: clamp(160px, 25vw, 220px);
+    object-fit: cover;
+     border-radius: var(--radius);
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+
+/* ---------------- CARD CONTENT ---------------- */
+.card h2 {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+/* ---------------- BUTTON ---------------- */
+
+.card a {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 20px;
+    color: #ff1f1f;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border: 2px solid #ff1f1f;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.card a:hover {
+    background-color: #ff1f1f;
+    color: #fff !important;
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ---------------- MOBILE REFINEMENTS ---------------- */
+@media (max-width: 480px) {
+
+  .card {
+    padding: 14px;
+  }
+}
+
+/* =========================
+   MOBILE IMPROVEMENTS
+   ========================= */
+@media (max-width: 576px) {
+
+    /* Hero Section */
+    .hero-section {
+        padding: 90px 15px 60px;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .main-title {
+        font-size: clamp(1.8rem, 9vw, 4rem);
+        font-weight: 700;
+        line-height: 0.95;
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+    }
+
+    .main-description {
+        font-size: 0.75rem!important;
+        line-height: 1.6;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+
+     /* HERO BUTTON WRAPPER */
+    .hero-section .d-flex {
+        flex-direction: column;
+        gap: 12px !important;
+        padding: 0 12px;
+    }
+
+    /* HERO BUTTONS */
+    .hero-section .btn-menu {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 14px 0;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    .btn-menu {
+        padding: 12px 28px!important;
+        font-size: 0.75rem;
+    }
+}

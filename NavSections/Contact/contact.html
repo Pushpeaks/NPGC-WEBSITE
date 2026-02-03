@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+<body>
+        <div class="container reveal mt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card shadow">
+                        <div class="row cform g-0">
+                            <div class="col-md-4 get p-4">
+                                <h3 class="mb-4">Get in Touch</h3>
+                                <div class="mb-3 data">
+                                    <h5><i class="fas fa-map-marker-alt me-2"></i>Address</h5>
+                                    <p>National Post Graduate College<br>2, Rana Pratap Marg<br>Lucknow - 226001<br>Uttar Pradesh (India)</p>
+                                </div>
+                                <div class="mb-3 data">
+                                    <h5><i class="fas fa-clock me-2"></i>Working Hours</h5>
+                                    <p>Monday - Saturday: 8:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                                </div>
+                                <div class="mb-3 data">
+                                    <h5><i class="fas fa-phone me-2"></i>Phone</h5>
+                                    <p>0522 4021304</p>
+                                </div>
+                                <div class="mb-3 data">
+                                    <h5><i class="fas fa-envelope me-2"></i>Email</h5>
+                                    <p>support@npgc.in</p>
+                                </div>
+                            </div>
+                            <div class="col-md-8 p-4">
+                                <h2 class="mb-4">Leave A Message</h2>
+                                <form class="needs-validation" novalidate>
+                                    <div class="mb-3 data">
+                                        <input type="text" class="form-control" placeholder="Full Name" required id="name">
+                                        <div class="valid-feedback">Looks good!</div>
+                                        <div class="invalid-feedback">Please enter your name.</div>
+                                    </div>
+                                    <div class="mb-3 data">
+                                        <input type="email" class="form-control" placeholder="Email Address" required id="email">
+                                        <div class="valid-feedback">Looks good!</div>
+                                        <div class="invalid-feedback">Please enter a valid email.</div>
+                                    </div>
+                                    <div class="mb-3 data">
+                                        <input type="tel" class="form-control" placeholder="Contact No" required id="contact">
+                                        <div class="valid-feedback">Looks good!</div>
+                                        <div class="invalid-feedback">Please enter your contact number.</div>
+                                    </div>
+                                    <div class="mb-3 data">
+                                        <input type="text" class="form-control" placeholder="Subject" required id="subject">
+                                        <div class="valid-feedback">Looks good!</div>
+                                        <div class="invalid-feedback">Please enter a subject.</div>
+                                    </div>
+                                    <div class="mb-3 data">
+                                        <textarea class="form-control" placeholder="Message" rows="4" required id="message"></textarea>
+                                        <div class="valid-feedback">Looks good!</div>
+                                        <div class="invalid-feedback">Please enter your message.</div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container reveal my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="text-center mb-4">How to find us</h2>
+                    <div class="row">
+                        <div class="col-12">
+                            <iframe
+                                class="w-100"
+                                height="400"
+                                src="https://www.google.com/maps?q=National%20PG%20College%20Lucknow&output=embed"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https//cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https//cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+<script>
+   
+(() => {
+  'use strict'
+
+  const forms = document.querySelectorAll('.needs-validation')
+
+  
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})();
+  const revealElements = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  revealElements.forEach(el => observer.observe(el));
+
+</script>
+</body>
+</html>

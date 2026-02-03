@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College News Scroller</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HERO (DEMO ONLY) -->
+  <section class="hero">
+    <h1>Hero Section</h1>
+    <p>Floating News Panel</p>
+  </section>
+
+  <!-- TOGGLE BUTTON -->
+  <button id="newsBtn" aria-label="Toggle News">📰</button>
+
+  <!-- NEWS PANEL (OPEN BY DEFAULT) -->
+  <div id="newsPanel" class="open">
+    <div class="news-header">Latest News</div>
+
+    <div class="news-body">
+      <div class="news-track">
+        <ul>
+          <li>Workshop on Data Science – Register Now</li>
+          <li>Annual Cultural Fest Dates Announced</li>
+          <li>Admissions Open for Session 2026–27</li>
+          <li>NAAC Peer Team Visit Scheduled</li>
+          <li>Semester Exams Begin from March 10</li>
+          <li>National Seminar on AI – Feb 15</li>
+          <li>Placement Drive for Final Year Students</li>
+          <li>Library Timings Extended During Exams</li>
+          <li>Scholarship Forms Deadline Extended</li>
+        </ul>
+
+        <!-- DUPLICATE FOR SEAMLESS LOOP -->
+        <ul>
+          <li>Workshop on Data Science – Register Now</li>
+          <li>Annual Cultural Fest Dates Announced</li>
+          <li>Admissions Open for Session 2026–27</li>
+          <li>NAAC Peer Team Visit Scheduled</li>
+          <li>Semester Exams Begin from March 10</li>
+          <li>National Seminar on AI – Feb 15</li>
+          <li>Placement Drive for Final Year Students</li>
+          <li>Library Timings Extended During Exams</li>
+          <li>Scholarship Forms Deadline Extended</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

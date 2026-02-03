@@ -1,0 +1,327 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+/* =========================
+   HERO SECTION 
+   ========================= */
+.hero-section {
+    position: relative;
+    padding: 120px 0 80px 0;
+    background: url('../images/about/accreditations.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gradient-overlay-v {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+    to right,
+    rgba(69, 10, 10, 0.8) 0%,
+    rgba(0, 0, 0, 0.75) 40%,
+    rgba(69, 10, 10, 0.8) 100%
+  );
+    z-index: 1;
+}
+
+.z-3 { z-index: 3 !important; }
+
+/* Typography */
+.main-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    font-size: clamp(4rem, 10vw, 7.5rem);
+    line-height: 0.85;
+    background: linear-gradient(to bottom, #ffffff 30%, #ff1f1f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -3px;
+}
+
+.main-description {
+    max-width: 650px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.btn-menu {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.4s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-menu:hover {
+    background: linear-gradient(to bottom, #ff5733 0%, #e64a19 100%) !important;
+    border-color: #ff5733;
+    color: #fff;
+    box-shadow: 0 8px 15px rgba(230, 74, 25, 0.4);
+}
+
+.infra-overview {
+    padding: 60px 10%;
+    background: white;
+    text-align: justify;
+}
+
+.infra-overview h2 {
+    color: #A71836;
+    font-size: 28px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.infra-overview h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #A71836;
+    margin-top: 8px;
+}
+
+.facilities-section {
+    padding: 60px 10%; 
+    background: #fdfdfd;
+}
+
+.facilities-section h2 {
+    color: #A71836;
+    margin-bottom: 35px;
+    font-size: 28px;
+    text-align: left;
+}
+
+.facility-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px; 
+    margin-bottom: 40px;
+}
+
+.facility-card {
+    background: white;
+    padding: 35px 20px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-bottom: 4px solid transparent;
+}
+
+.facility-card i {
+    font-size: 42px;
+    color: #A71836;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.facility-card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #444;
+}
+
+.facility-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    border-bottom: 4px solid #A71836;
+}
+
+.facility-card.active {
+    background: #A71836;
+    color: white;
+    box-shadow: 0 10px 20px rgba(167, 24, 54, 0.2);
+}
+
+.facility-card.active i, 
+.facility-card.active h3 {
+    color: white;
+}
+
+.facility-content {
+    display: none;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-left: 6px solid #A71836;
+    animation: fadeIn 0.5s ease;
+}
+
+.facility-content.active {
+    display: block;
+}
+
+.facility-content h3 {
+    color: #A71836;
+    margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.infra-cards-section {
+    padding: 80px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    background: #fff;
+}
+
+.infra-card {
+    background: #f9f9f9;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.infra-card i {
+    font-size: 40px;
+    color: #A71836;
+    margin-bottom: 15px;
+}
+
+.infra-card h3 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.infra-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.infra-card:hover {
+    background: #A71836;
+    color: white;
+    transform: translateY(-10px);
+}
+
+.infra-card:hover i, 
+.infra-card:hover h3, 
+.infra-card:hover p {
+    color: white;
+}
+.infra-gallery {
+    padding: 80px 10%;
+    background: #f6f6f6;
+}
+
+.infra-gallery h2 {
+    text-align: center;
+    color: #A71836;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .infra-overview, .facilities-section, .infra-cards-section, .infra-gallery {
+        padding: 40px 5%;
+    }
+    
+    .page-title-section h1 {
+        font-size: 28px;
+    }
+}
+/* Responsive */
+@media (max-width: 1400px) {
+    .main-title {
+        font-size: clamp(3.1rem, 8vw, 7.5rem);
+        font-weight: 700;
+    }
+}
+/* =========================
+   MOBILE IMPROVEMENTS
+   ========================= */
+@media (max-width: 576px) {
+
+    /* Hero Section */
+    .hero-section {
+        padding: 90px 15px 60px;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .main-title {
+        font-size: clamp(1.8rem, 9vw, 4rem);
+        font-weight: 700;
+        line-height: 0.95;
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+    }
+
+    .main-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+
+    
+     /* HERO BUTTON WRAPPER */
+    .hero-section .d-flex {
+        flex-direction: column;
+        gap: 12px !important;
+        padding: 0 12px;
+    }
+
+    .btn-menu {
+        padding: 12px 28px!important;
+        font-size: 0.75rem;
+    }
+
+    /* HERO BUTTONS */
+    .hero-section .btn-menu {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 14px 0;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+}

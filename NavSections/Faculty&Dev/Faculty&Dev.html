@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faculty & Development</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Faculty&Dev.css" />
+  </head>
+  <body>
+    <header class="hero-section">
+      <div class="gradient-overlay-v"></div>
+
+      <div class="container text-center text-white position-relative z-3">
+        <span
+          class="badge rounded-pill bg-danger px-3 py-2 mb-4 tracking-widest text-xs uppercase"
+        >
+          Knowledge • Skills • Career
+        </span>
+
+        <h2 class="main-title fw-black text-uppercase mb-3">
+          Faculty &<br>Department
+        </h2>
+
+        <p class="lead mx-auto mb-5 opacity-75 main-description">
+          Explore our diverse faculties and departments, each dedicated to
+          excellence in education and research.
+        </p>
+
+        <div class="d-flex justify-content-center gap-3 mb-5 pb-5">
+          <a href="#departments" class="btn btn-menu btn-lg px-5 py-3 fw-bold">
+            View Departments
+          </a>
+        </div>
+        
+      </div>
+    </header>
+
+    <div class="departments" id="departments">
+      <aside class="sidebar">
+        <h2>
+          <i class="fa-solid fa-chalkboard-user"></i>&nbsp;&nbsp;Faculties
+        </h2>
+        <input type="text" placeholder="Search departments..." id="search" />
+
+        <ul id="deptList">
+          <li class="active" data-target="arts">
+            <i class="fa-solid fa-book"></i> Arts
+          </li>
+          <li data-target="commerce">
+            <i class="fa-solid fa-chart-line"></i> Commerce
+          </li>
+          <li data-target="dduk">
+            <i class="fa-solid fa-pen-nib"></i> DDUK
+          </li>
+          <li data-target="management">
+            <i class="fa-solid fa-briefcase"></i> Management
+          </li>
+          <li data-target="science">
+            <i class="fa-solid fa-flask"></i> Science
+          </li>
+        </ul>
+      </aside>
+
+      <section class="content">
+        <div class="faculty-section active" data-faculty="arts">
+          <h2>Faculty of Arts</h2>
+          <p>
+            The department focuses on strong academic foundations and applied
+            research, preparing students for careers in science, technology, and
+            education.
+          </p>
+
+          <div class="faculty-grid">
+            <div class="faculty-card " style="background: url(https://img.freepik.com/free-vector/prehistoric-cave-with-caveman-primitive-painting_107791-26329.jpg?t=st=1769270648~exp=1769274248~hmac=87063d55918f2f2958274d6908cb4f0b3291150f430960176fe44957cbdaaf89&w=740);">
+              <i class="fa-solid fa-dna icon"></i>
+              <div class="overlay "></div>
+              <div class="faculty-details">
+                <h4>Department of Anthropology</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Anthro.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card " style="background: url(https://img.freepik.com/free-vector/illustration-data-analysis-graph_53876-37531.jpg?t=st=1769271016~exp=1769274616~hmac=f8eb956720282b599f500cdbce5a0e53a6bb1ccbd2fa1e35ec2f6bc764683937&w=1060);">
+              <i class="fa-solid fa-chart-line icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of Economics</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Economics.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card " style="background: url(https://img.freepik.com/free-photo/book-with-green-board-background_1150-3837.jpg?t=st=1769271096~exp=1769274696~hmac=00378307ce02ef63b675b233cfe69e3fe787f2c074634265cdc5094c31e4ca1a&w=1060);">
+              <i class="fa-solid fa-chalkboard-user icon"></i>
+              <div class="overlay"></div>
+
+              <div class="faculty-details">
+                <h4>Department of Education</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Education.html"  >
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card " style="background: url(https://img.freepik.com/premium-photo/multicolored-small-wooden-letters-english-alphabet_116441-5557.jpg);">
+              <i class="fa-solid fa-pen-nib icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of English</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/English.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card " style="background: url(https://img.freepik.com/premium-photo/vintage-globe-old-map-background-with-retro-style_875825-185895.jpg);">
+              <i class="fa-solid fa-earth-asia icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of Geography</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Geography.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card " style="background: url(https://img.freepik.com/premium-vector/vector-illustration-hindi-varnamala-hindi-alphabet-consists-13-vowels-svar-33-consona_860190-987.jpg);">
+              <i class="fa-solid fa-language icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of Hindi</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Hindi.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card " style="background: url(https://img.freepik.com/premium-photo/vintage-compass-goose-quill-pen-spyglass-pocket-watch-lying-old-map_564276-7454.jpg);">
+              <i class="fa-solid fa-book icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of History</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/History.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card " style="background: url(https://img.freepik.com/premium-photo/sports-training-session-with-athletes-working-drills-techniques1_1247965-107545.jpg);">
+              <i class="fa-solid fa-person-running icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of Physical Education</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/PhyEdu.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card " style="background: url(https://img.freepik.com/premium-photo/illustration-political-meeting-stylized-city_151355-56010.jpg);">
+              <i class="fa-solid fa-scale-balanced icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of Political Science</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Politics.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card " style="background: url(https://img.freepik.com/premium-photo/abstract-digital-brain-with-network-connections-ai-technology-neuroscience-technolo_1261705-759.jpg);">
+              <i class="fa-solid fa-brain icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of Psychology</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Psychology.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faculty-section active" data-faculty="commerce">
+          <h2>Faculty of Commerce</h2>
+          <p>
+            The department focuses on strong academic foundations and applied
+            research, preparing students for careers in science, technology, and
+            education.
+          </p>
+
+          <div class="faculty-grid">
+            <div class="faculty-card " style="background: url(https://img.freepik.com/premium-photo/hands-holding-virtual-hologram-growth-chart-shopping-cart-icon_314993-7640.jpg);">
+              <i class="fa-solid fa-coins icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of Commerce</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Commerce.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faculty-section active" data-faculty="dduk">
+          <h2>Faculty of DDUK</h2>
+          <p>
+            The department focuses on strong academic foundations and applied
+            research, preparing students for careers in science, technology, and
+            education.
+          </p>
+
+          <div class="faculty-grid">
+            <div class="faculty-card " style="background: url(https://img.freepik.com/premium-photo/global-online-banking-money-transfer-representation-digital-payment-foreign-exchange-crossborder-transaction-secure-banking-financial-technology-international-payment-system_930683-18042.jpg);">
+              <i class="fa-solid fa-money-bill-wave icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of DDUK - Banking & Finance</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/DDUKBanking.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card " style="background: url(https://img.freepik.com/premium-photo/future-programming-concept_700248-6607.jpg);">
+              <i class="fa-solid fa-laptop icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of DDUK - Software Development & E - Governance</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/DDUKSoftware.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card " style="background: url(https://img.freepik.com/premium-photo/unveiling-power-press-enhancing-communication-with-media-conference-microphones_1000124-34569.jpg);" >
+              <i class="fa-solid fa-newspaper icon"></i>
+              <div class="overlay"></div>
+
+              <div class="faculty-details">
+                <h4>Department of Journalism & Mass Communication</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Journalism.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faculty-section active" data-faculty="management">
+          <h2>Faculty of Management</h2>
+          <p>
+            The department focuses on strong academic foundations and applied
+            research, preparing students for careers in science, technology, and
+            education.
+          </p>
+
+          <div class="faculty-grid">
+            <div class="faculty-card" style="background: url(https://img.freepik.com/premium-photo/3d-flat-icon-as-project-team-presenting-their-findings-business-meeting-concept-as-vector-ill_980716-416078.jpg);">
+              <i class="fa-solid fa-briefcase icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of Management</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Management.html" >
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faculty-section active" data-faculty="science">
+          <h2>Faculty of Science</h2>
+          <p>
+            The department focuses on strong academic foundations and applied
+            research, preparing students for careers in science, technology, and
+            education.
+          </p>
+
+          <div class="faculty-grid">
+            <div class="faculty-card " style="background: url(https://img.freepik.com/premium-photo/close-up-pink-flowering-plant_1048944-26336211.jpg);">
+              <i class="fa-solid fa-leaf icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of Botany</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Botany.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card" style="background: url(https://img.freepik.com/premium-photo/blue-bottle-with-blue-liquid-bottle-blue-liquid_1006603-9524.jpg);">
+              <i class="fa-solid fa-flask icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of Chemistry</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Chemistry.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card" style="background: url(https://img.freepik.com/premium-photo/security-protection-privacy-safety-connection-internet-network-system-cyber-cyberspace-inf_980716-22662.jpg);">
+              <i class="fa-solid fa-laptop-code icon"></i>
+              <div class="overlay"></div>
+
+              <div class="faculty-details">
+                <h4>Department of Computer Science</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Computer.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card" style="background: url(https://img.freepik.com/premium-photo/national-mathematics-day-copy-space-background_548646-84124.jpg);">
+              <i class="fa-solid fa-square-root-variable icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of Mathematics</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Mathematics.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card" style="background: url(https://img.freepik.com/premium-photo/quotjudges-interacting-with-physics-project-evaluationquot_1324785-108333.jpg);">
+              <i class="fa-solid fa-microchip icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of Physics & Electronics</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Physics.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card" style="background: url(https://img.freepik.com/premium-photo/bar-chart-graph-growth-diagram-infographics-elements-3d-rendering-illustration_926199-3816499.jpg);">
+              <i class="fa-solid fa-chart-column icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of Statistics</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Statistics.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-card" style="background: url(https://img.freepik.com/premium-photo/diverse-animal-gathering-by-waterside_1195984-2442.jpg);">
+              <i class="fa-solid fa-paw icon"></i>
+              <div class="overlay"></div>
+              <div class="faculty-details">
+                <h4>Department of Zoology</h4>
+                <p>8 Departments. 6 Labs</p>
+                <a href="Departments/Zoology.html">
+                  Explore Faculty <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const sidebarItems = document.querySelectorAll("#deptList li");
+      const facultySections = document.querySelectorAll(".faculty-section");
+
+      sidebarItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          sidebarItems.forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+
+          const target = item.getAttribute("data-target");
+
+          facultySections.forEach((section) => {
+            section.classList.remove("active");
+          });
+
+          const activeSection = document.querySelector(
+            `.faculty-section[data-faculty="${target}"]`,
+          );
+
+          if (activeSection) {
+            activeSection.classList.add("active");
+          }
+        });
+      });
+
+      // Scroll animation (RENAMED OBSERVER)
+      const cardObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        { threshold: 0.2 },
+      );
+
+      document.querySelectorAll(".faculty-card").forEach((card) => {
+        cardObserver.observe(card);
+      });
+
+      // Search filter
+      document.getElementById("search").addEventListener("keyup", function () {
+        let value = this.value.toLowerCase();
+        sidebarItems.forEach((li) => {
+          li.style.display = li.textContent.toLowerCase().includes(value)
+            ? ""
+            : "none";
+        });
+      });
+    </script>
+  </body>
+</html>

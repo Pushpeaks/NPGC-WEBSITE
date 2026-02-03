@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Infrastructure & Facilities | National PG College</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/infrastructure.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="hero-section">
+
+        <div class="gradient-overlay-v"></div>
+
+        <div class="container text-center text-white position-relative z-3">
+            
+            <h2 class="main-title fw-black text-uppercase mb-3">
+                Infrastructure<br>Facilities
+            </h2>
+            
+            <p class="lead mx-auto mb-5 opacity-75 main-description">
+                National Post Graduate College, Lucknow
+            </p>
+            
+            <div class="d-flex justify-content-center gap-3 mb-5 pb-5">
+                <a href="#infra-overview-id" class="btn btn-menu btn-lg px-5 py-3 fw-bold">Campus Overview</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Us Navigation -->
+    <section class="about-us-nav-section bg-light py-4">
+        <div class="container">
+            <h4 class="text-center mb-3">About Us</h4>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <a href="thecollege.html" class="btn btn-outline-primary">The College</a>
+                <a href="vision-mission.html" class="btn btn-outline-primary">Vision & Mission</a>
+                <a href="principal-desk.html" class="btn btn-outline-primary">Principal's Desk</a>
+                <a href="annual_reports.html" class="btn btn-outline-primary">Annual Reports</a>
+                <a href="accreditations-ranking.html" class="btn btn-outline-primary">Accreditations & Rankings</a>
+                <a href="infrastructure.html" class="btn btn-outline-primary disabled">Infrastructure & Facilities</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="infra-overview" id="infra-overview-id">
+        <h2>Campus Infrastructure Overview</h2>
+        <p>
+            The college has been keeping pace with the growing activities and academic demands. Faculty of Science,
+            faculty of Management Studies and the faculty of Computer Science were introduced and required numbers of
+            labs were set up.
+
+            There has been immense addition to the infrastructure as an auditorium with a seating capacity of 800,
+            Evaluation cell, Secrecy cell, Administrative block, Central library, underground parking, hostel for girls,
+            sports ground were added.
+
+            The college provides all departments with facilities like office rooms and common rooms. There are separate
+            common rooms for female students in every academic block with washrooms for female students, male students
+            and staff separately.
+
+            The college is made accessible by the installation of elevator and ramps are being constructed for the use
+            of physically challenged students. Audio books, screen-reading software, Braille display and scanning
+            facilities are available for the visually challenged students. Special attention is paid to the students
+            suffering from dyslexia and hearing-impairment.
+        </p>
+    </section>
+
+    <section class="facilities-section">
+        <h2>Major Facilities</h2>
+
+        <!-- Facility Cards -->
+        <div class="facility-cards">
+
+            <div class="facility-card active" onclick="openTab(event,'library')">
+                <i class="fa-solid fa-book"></i>
+                <h3>Library</h3>
+            </div>
+
+            <div class="facility-card" onclick="openTab(event,'labs')">
+                <i class="fa-solid fa-flask"></i>
+                <h3>Laboratories</h3>
+            </div>
+
+            <div class="facility-card" onclick="openTab(event,'sports')">
+                <i class="fa-solid fa-football"></i>
+                <h3>Sports</h3>
+            </div>
+
+            <div class="facility-card" onclick="openTab(event,'hostel')">
+                <i class="fa-solid fa-bed"></i>
+                <h3>Hostel</h3>
+            </div>
+
+            <div class="facility-card" onclick="openTab(event,'ict')">
+                <i class="fa-solid fa-desktop"></i>
+                <h3>Smart Classrooms</h3>
+            </div>
+
+        </div>
+
+        <!-- Facility Content Box -->
+        <div id="library" class="facility-content active">
+            <h3>Central Library</h3>
+            <p>The college has a fully automated central library with thousands of books, journals, and e-resources.</p>
+        </div>
+
+        <div id="labs" class="facility-content">
+            <h3>Advanced Laboratories</h3>
+            <p>Modern labs for Science, Computer Science, Commerce, and Research.</p>
+        </div>
+
+        <div id="sports" class="facility-content">
+            <h3>Sports Facilities</h3>
+            <p>Playgrounds, indoor sports hall, gymnasium, and inter-college tournaments.</p>
+        </div>
+
+        <div id="hostel" class="facility-content">
+            <h3>Student Hostel</h3>
+            <p>Secure hostel for girls with CCTV, Wi-Fi, and modern amenities.</p>
+        </div>
+
+        <div id="ict" class="facility-content">
+            <h3>ICT & Smart Classrooms</h3>
+            <p>Digital classrooms with projectors, smart boards, and campus-wide Wi-Fi.</p>
+        </div>
+
+    </section>
+
+
+    <!-- Infrastructure Highlights -->
+    <section class="infra-cards-section">
+        <div class="infra-card">
+            <i class="fa-solid fa-building"></i>
+            <h3>Smart Classrooms</h3>
+            <p>Digitally enabled classrooms with projectors and interactive boards.</p>
+        </div>
+
+        <div class="infra-card">
+            <i class="fa-solid fa-wifi"></i>
+            <h3>Campus Wi-Fi</h3>
+            <p>High-speed internet connectivity across the campus.</p>
+        </div>
+
+        <div class="infra-card">
+            <i class="fa-solid fa-book-open"></i>
+            <h3>Central Library</h3>
+            <p>Rich collection of books, journals, and digital resources.</p>
+        </div>
+
+        <div class="infra-card">
+            <i class="fa-solid fa-dumbbell"></i>
+            <h3>Sports Complex</h3>
+            <p>Facilities for indoor and outdoor sports activities.</p>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="infra-gallery">
+        <h2>Campus Gallery</h2>
+
+        <div class="gallery-grid">
+            <img src="images/about/campus1.jpg">
+            <img src="images/about/library.jpg">
+            <img src="images/about/lab2.jpg">
+            <img src="images/about/sports.jpg">
+            <img src="images/about/classroom.jpg">
+            <img src="images/about/seminarroom.jpg">
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="js/include.js"></script>
+    <script src="js/infrastructure.js"></script>
+
+</body>
+
+</html>

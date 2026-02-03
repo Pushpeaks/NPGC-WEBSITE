@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <link rel="stylesheet" href="news.css">
+     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>News</title>
+</head>
+<body>
+        <header class="hero-section">
+      <div class="gradient-overlay-v"></div>
+
+      <div class="container text-center text-white position-relative z-3">
+        <span
+          class="badge rounded-pill bg-danger px-3 py-2 mb-4 tracking-widest text-xs uppercase"
+        >
+            Latest • Updates • Events
+        </span>
+
+        <h2 class="main-title fw-black text-uppercase mb-3">
+          College<br>News
+        </h2>
+
+        <p class="lead mx-auto mb-5 opacity-75 main-description">
+            Stay updated with the latest news and events from our college. 
+            From academic achievements to extracurricular activities, 
+            we bring you all the important updates in one place.
+        </p>
+
+        <div class="d-flex justify-content-center gap-3 mb-5 pb-5">
+          <a href="#news-container" class="btn btn-menu btn-lg px-5 py-3 fw-bold">
+            View News
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="row mt-5 text-center">
+          <div class="col-12">
+            <h2 class="display-5 fw-bold text-dark text-uppercase">
+              News Gallery
+            </h2>
+            <div
+              class="mx-auto bg-danger mt-2"
+              style="width: 60px; height: 4px"
+            ></div>
+            <p class="text-muted mt-3">
+                Explore our news gallery to see highlights from recent events,
+                student activities, and campus life.
+            </p>
+          </div>
+        </div>
+   	<div class="news-container" id="news-container">
+        <div class="gallery">
+		<div class="lightbox">
+                <h2>January 2025</h2>
+                <div class="lightbox-gallery">
+				<div><img src="https://www.npgc.in/Assets/News/Thumb/28_01_2025_2054.jpg" data-image-hd="https://www.npgc.in/Assets/News/28_01_2025_2054.jpg" ></div>
+				</div>
+                </div>
+                <div class="lightbox">
+                <h2>December 2021</h2>
+                <div class="lightbox-gallery">
+                <div><img src="https://www.npgc.in/Assets/News/Thumb/14_12_2021_2052.jpg" data-image-hd="https://www.npgc.in/Assets/News/14_12_2021_2052.jpg" ></div>
+				<div><img src="https://www.npgc.in/Assets/News/Thumb/14_12_2021_2053.jpg" data-image-hd="https://www.npgc.in/Assets/News/14_12_2021_2053.jpg" ></div></div>
+                </div>
+                
+                <div class="lightbox">
+                <h2>August 2019</h2>
+                <div class="lightbox-gallery">
+				<div><img src="https://www.npgc.in/Assets/News/Thumb/06.08.2019_2051.jpg" data-image-hd="https://www.npgc.in/Assets/News/06.08.2019_2051.jpg" ></div>
+				</div>
+                </div>
+                <div class="lightbox">
+                <h2>July 2019</h2>
+                <div class="lightbox-gallery">
+                <div><img src="https://www.npgc.in/Assets/News/Thumb/27.07.2019_1066.jpg" data-image-hd="https://www.npgc.in/Assets/News/27.07.2019_1066.jpg" ></div>
+				<div><img src="https://www.npgc.in/Assets/News/Thumb/27.07.2019_2049.jpg" data-image-hd="https://www.npgc.in/Assets/News/27.07.2019_2049.jpg" ></div>
+				<div><img src="https://www.npgc.in/Assets/News/Thumb/27.07.2019_2050.jpg" data-image-hd="https://www.npgc.in/Assets/News/27.07.2019_2050.jpg" ></div>
+				</div>
+                </div>
+                <div class="lightbox">
+                <h2>June 2019</h2>
+                <div class="lightbox-gallery">
+                <div><img src="https://www.npgc.in/Assets/News/Thumb/22.06.2019_1062.jpg" data-image-hd="https://www.npgc.in/Assets/News/22.06.2019_1062.jpg" ></div>
+				<div><img src="https://www.npgc.in/Assets/News/Thumb/22.06.2019_1063.jpg" data-image-hd="https://www.npgc.in/Assets/News/22.06.2019_1063.jpg" ></div>
+				<div><img src="https://www.npgc.in/Assets/News/Thumb/22.06.2019_1064.jpg" data-image-hd="https://www.npgc.in/Assets/News/22.06.2019_1064.jpg" ></div>
+				<div><img src="https://www.npgc.in/Assets/News/Thumb/14.06.2019_1060.jpg" data-image-hd="https://www.npgc.in/Assets/News/14.06.2019_1060.jpg" ></div>
+                    </div>
+		</div>
+        </div>  
+	</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+
+  var $lightbox = $("<div class='lightbox'></div>");
+  var $img = $("<img>");
+  var $caption = $("<p class='caption'></p>");
+
+  $lightbox.append($img).append($caption);
+  $('body').append($lightbox);
+
+  $('.lightbox-gallery img').on('click', function (e) {
+    e.preventDefault();
+
+    var src = $(this).data('image-hd');
+    var cap = $(this).attr('alt');
+
+    $img.attr('src', src);
+    $caption.text(cap);
+
+    $lightbox.fadeIn('fast');
+  });
+
+  // Close when clicking background
+  $lightbox.on('click', function () {
+    $lightbox.fadeOut('fast');
+  });
+
+  // Prevent closing when clicking image
+  $img.on('click', function (e) {
+    e.stopPropagation();
+  });
+
+});
+</script>
+
+    </body>
+    </html>

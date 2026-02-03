@@ -1,0 +1,517 @@
+/* ================= ROOT & RESET ================= */
+:root {
+  --primary: #A71836;
+  --primary-soft: rgba(167, 24, 54, 0.12);
+  --dark: #1f2937;
+   --bg-soft: #a718370d;
+  --muted: #6b7280;
+  --bg: #f4f7fb;
+  --card-radius: 14px;
+  --ease: cubic-bezier(.4, 0, .2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: var(--bg-soft);
+  
+}
+
+/* ================= HERO / BANNER ================= */
+
+/* =========================
+   HERO SECTION 
+   ========================= */
+.hero-section {
+    position: relative;
+    padding: 120px 0 80px 0;
+    background: url('../Academics/assets/course.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gradient-overlay-v {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+    to right,
+    rgba(69, 10, 10, 0.8) 0%,
+    rgba(0, 0, 0, 0.75) 40%,
+    rgba(69, 10, 10, 0.8) 100%
+  );
+    z-index: 1;
+}
+
+.z-3 { z-index: 3 !important; }
+
+/* Typography */
+.main-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    font-size: clamp(4rem, 10vw, 7.5rem);
+    line-height: 0.85;
+    background: linear-gradient(to bottom, #ffffff 30%, #ff1f1f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -3px;
+}
+
+.main-description {
+    max-width: 650px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.btn-menu {
+    background-color: transparent;
+    color: #fff!important;
+    border: 2px solid rgba(255, 255, 255, 0.8)!important;
+    transition: all 0.4s ease-in-out!important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-menu:hover {
+    background: linear-gradient(to bottom, #ff5733 0%, #e64a19 100%) !important;
+    border-color: #ff5733!important;
+    color: #fff!important;
+    box-shadow: 0 8px 15px rgba(230, 74, 25, 0.4);
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ /* Header */
+    header {
+      background: linear-gradient(135deg, var(--primary),var(--primary));
+      padding: 30px;
+      text-align: center;
+      color: #fff;
+    }
+
+    header h1 {
+      font-weight: 600;
+    }
+
+    /* Layout */
+    .departments{
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .sidebar input {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sidebar li {
+      padding: 12px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: 0.3s;
+    }
+
+    .sidebar li:hover,
+    .sidebar li.active {
+      background: #eef1ff;
+      color: var(--primary);
+    }
+
+    /* Main Content */
+    .content {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .content h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    /* Faculty Cards */
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px;
+    }
+
+    .faculty-card {
+      border-radius: 12px;
+      padding: 15px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 5px;
+      align-items: start;
+      opacity: 0;
+      transform: translateY(30px);
+      
+      background-size: cover !important;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .faculty-card:hover{
+      .icon{
+     scale: 1.1;
+      background-color: #ffffff;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+    }
+    .faculty-details {
+      display: flex;
+      width: 80%;
+      color: #fff;
+      flex-direction: column;
+      padding: 10px;
+      h4{
+        margin-bottom: -5px;
+        font-size: 18px;
+      }
+
+    }
+    a{
+      padding: 8px 12px;
+      border: 2px solid #a71837;
+      width: fit-content;
+      border-radius: 8px;
+      background-color: #a7183759;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background-color 0.3s;  
+      cursor: pointer;
+    }
+    a:hover{
+      animation:pulse 1s ease;
+      box-shadow: 0 4px 12px rgba(167, 24, 54, 0.4);
+    }
+    @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
+    70% { box-shadow: 0 0 0 10px rgba(167, 24, 54, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(167, 24, 54, 0); }
+}
+    .icon{
+      width: 20px;
+      height: 20px;
+      color: var(--primary);
+      margin-right: 8px;
+      background-color: #ffffff65;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+    
+    .overlay{
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.767);
+      border-radius: 12px;
+      opacity: 0.8;
+      transition: opacity 0.6s;
+    }
+ 
+
+    .faculty-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .faculty-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      .overlay {
+        opacity: 1;
+      }
+    }
+
+    .faculty-section {
+  display: none;
+  animation: fadeSlide 0.5s ease forwards;
+}
+
+.faculty-section.active {
+  display: block;
+}
+
+
+
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+    .faculty-card img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ================= LARGE SCREENS (1440px+) ================= */
+@media (min-width: 1440px) {
+  .intro-section {
+    max-width: 900px;
+  }
+
+  .container {
+    padding: 50px 80px;
+  }
+}
+
+/* ================= LAPTOPS & SMALL DESKTOPS ================= */
+@media (max-width: 1200px) {
+  .containers {
+    padding-left: 60px;
+  }
+
+  .intro-section .heading {
+    font-size: 56px;
+  }
+}
+
+/* ================= TABLETS ================= */
+@media (max-width: 1024px) {
+  .containers {
+    padding: 0 40px;
+  }
+
+  .intro-section {
+    margin-bottom: 60px;
+  }
+
+  .intro-section .heading {
+    font-size: 48px;
+  }
+
+  .intro-section .description {
+    font-size: 16px;
+  }
+
+  .faculty-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= SMALL TABLETS ================= */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: -1;
+  }
+
+  header {
+    padding: 25px 15px;
+  }
+}
+
+/* ================= MOBILE DEVICES ================= */
+@media (max-width: 768px) {
+ .containers {
+        padding-left: 20px;
+        background-attachment: scroll;
+    }
+
+    .intro-section {
+        bottom: 50px;
+    }
+
+    .intro-section .heading {
+        font-size: 36px;
+    }
+
+    .intro-section .description {
+        font-size: 15px;
+    }
+
+  .faculty-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faculty-details {
+    width: 100%;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+/* ================= SMALL PHONES ================= */
+@media (max-width: 480px) {
+  .intro-section .heading {
+    font-size: 30px;
+  }
+
+  .intro-section .description {
+    font-size: 14px;
+  }
+
+  a {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+
+  .sidebar input {
+    padding: 8px 12px;
+  }
+
+  .faculty-card {
+    padding: 15px;
+  }
+}
+
+/* ================= TOUCH DEVICES (UX FIX) ================= */
+@media (hover: none) {
+  .faculty-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  a:hover {
+    box-shadow: none;
+  }
+}
+
+
+
+/* =========================
+   MOBILE IMPROVEMENTS
+   ========================= */
+@media (max-width: 576px) {
+
+    /* Hero Section */
+    .hero-section {
+        padding: 90px 15px 60px;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .main-title {
+        font-size: clamp(1.8rem, 9vw, 4rem);
+        font-weight: 700;
+        line-height: 0.95;
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+    }
+
+    .main-description {
+        font-size: 0.75rem!important;
+        line-height: 1.6;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+
+     /* HERO BUTTON WRAPPER */
+    .hero-section .d-flex {
+        flex-direction: column;
+        gap: 12px !important;
+        padding: 0 12px;
+    }
+
+    /* HERO BUTTONS */
+    .hero-section .btn-menu {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 14px 0;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    .btn-menu {
+        padding: 12px 28px!important;
+        font-size: 0.75rem;
+    }
+}
