@@ -18,6 +18,14 @@
 
     const cssUrl = rootPath + 'assets/includes/footer.css';
 
+    // IMMEDIATE: Inject CSS
+    if (!document.querySelector(`link[href="${cssUrl}"]`)) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = cssUrl;
+        document.head.appendChild(link);
+    }
+
     // Footer HTML content embedded to support local file viewing (file://)
     const footerHTML = `
 <footer class="main-footer">
@@ -82,25 +90,18 @@
     // Function to load the footer
     function loadFooter() {
         const placeholder = document.getElementById('footer-placeholder');
-        if (!placeholder) return;
+        if (!placeholder) return false;
+
+        if (placeholder.innerHTML.trim() !== '') return true;
 
         // Inject HTML
         placeholder.innerHTML = footerHTML;
-
-        // Inject CSS if not already present
-        if (!document.querySelector(`link[href="${cssUrl}"]`)) {
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = cssUrl;
-            document.head.appendChild(link);
-        }
+        return true;
     }
 
-    // Initialize
-    if (document.readyState === 'loading') {
+    // Try to load immediately
+    if (!loadFooter()) {
         document.addEventListener('DOMContentLoaded', loadFooter);
-    } else {
-        loadFooter();
     }
 })();
 

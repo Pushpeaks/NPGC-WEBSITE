@@ -63,7 +63,7 @@ function toggleNewsScroller() {
 }
 
 // Counting Animation for Stats
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const statNumbers = document.querySelectorAll('.stat-number');
 
   // Function to check if element is in viewport
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Trigger animation when stats section comes into view
   let animated = false;
 
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     if (!animated && statNumbers.length > 0) {
       if (isInViewport(statNumbers[0])) {
         animated = true;
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // News Scroller Functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const newsPanel = document.getElementById("newsPanel");
   const toggleBtn = document.getElementById("newsToggleBtn");
   const closeBtn = document.getElementById("closeNews");
@@ -174,4 +174,58 @@ document.addEventListener('DOMContentLoaded', function() {
     const dy = e.pageY - startY;
     scroller.scrollTop = startScroll - dy;
   });
+});
+
+// Hero Slider Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const slider = document.querySelector('.hero-slider');
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.dot');
+  let currentSlide = 0;
+  const slideInterval = 4000;
+  let autoSlideInterval;
+
+  function goToSlide(index) {
+    currentSlide = index;
+    const offset = -currentSlide * 100;
+    slider.style.transform = `translateX(${offset}%)`;
+
+    // Update dots
+    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots[currentSlide]) {
+      dots[currentSlide].classList.add('active');
+    }
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    goToSlide(currentSlide);
+  }
+
+  // Auto Slide
+  function startSlideTimer() {
+    autoSlideInterval = setInterval(nextSlide, slideInterval);
+  }
+
+  function stopSlideTimer() {
+    clearInterval(autoSlideInterval);
+  }
+
+  if (slides.length > 0) {
+    startSlideTimer();
+
+    // Dot Click Events
+    dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        stopSlideTimer(); // Pause on interaction
+        const slideIndex = parseInt(e.target.dataset.slide);
+        goToSlide(slideIndex);
+        startSlideTimer(); // Restart
+      });
+    });
+
+    // Optional: Pause on hover
+    slider.addEventListener('mouseenter', stopSlideTimer);
+    slider.addEventListener('mouseleave', startSlideTimer);
+  }
 });

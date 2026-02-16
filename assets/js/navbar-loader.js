@@ -15,6 +15,17 @@
 
   const cssUrl = rootPath + 'assets/includes/navbar.css';
 
+  // IMMEDIATE: Inject CSS
+  if (!document.querySelector('link[href="' + cssUrl + '"]')) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = cssUrl;
+    document.head.appendChild(link);
+  }
+
+  // IMMEDIATE: dependencies
+  ensureDependencies();
+
   const navbarHTML = `
   <div class="bg-black social-header text-white flex justify-between items-center p-2">
     <div class="flex gap-4">
@@ -131,7 +142,10 @@
 
   function loadNavbar() {
     const placeholder = document.getElementById('navbar-placeholder');
-    if (!placeholder) return;
+    if (!placeholder) return false;
+
+    // Only inject if not already injected (safety check)
+    if (placeholder.innerHTML.trim() !== "") return true;
 
     placeholder.innerHTML = navbarHTML;
 
@@ -140,16 +154,7 @@
     updateDateTime();
     setInterval(updateDateTime, 1000);
 
-    // Inject CSS
-    if (!document.querySelector('link[href="' + cssUrl + '"]')) {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = cssUrl;
-      document.head.appendChild(link);
-    }
-
-    // Also ensure Tailwind and FontAwesome are present (since header uses them)
-    ensureDependencies();
+    return true;
   }
 
   function initInteractivity() {
@@ -194,9 +199,10 @@
     }
   }
 
-  if (document.readyState === 'loading') {
+  // Try to load immediately
+  if (!loadNavbar()) {
+    // If placeholder not found (script might be in head), wait for DOMContentLoaded
     document.addEventListener('DOMContentLoaded', loadNavbar);
-  } else {
-    loadNavbar();
   }
+
 })();
