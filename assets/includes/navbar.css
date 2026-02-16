@@ -1,4 +1,4 @@
-/* Centralized Navbar Styles */
+/* Centralized Navbar and Header Styles */
 :root {
     --primary-red: #e74c3c;
     --primary-maroon: #8b1a2c;
@@ -11,6 +11,30 @@
     --bg-dark: #2a2a2a;
     --border-color: #d0d0d0;
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.responsive-logo {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 120px;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 992px) {
+    .responsive-logo {
+        width: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .responsive-logo {
+        width: 75px;
+    }
+}
+
+.social-header a i {
+    font-size: 14px;
 }
 
 

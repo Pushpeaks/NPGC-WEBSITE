@@ -16,6 +16,29 @@
   const cssUrl = rootPath + 'assets/includes/navbar.css';
 
   const navbarHTML = `
+  <div class="bg-black social-header text-white flex justify-between items-center p-2">
+    <div class="flex gap-4">
+      <a href="https://www.linkedin.com/school/national-pg-college/" target="_blank" title="LinkedIn" class="w-8 h-8 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-white hover:bg-opacity-30 transition duration-300"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/npgcin" target="_blank" title="Facebook" class="w-8 h-8 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-white hover:bg-opacity-30 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.youtube.com/@npgcin14" target="_blank" title="YouTube" class="w-8 h-8 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-white hover:bg-opacity-30 transition duration-300"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/npgcin?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" title="Instagram" class="w-8 h-8 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-white hover:bg-opacity-30 transition duration-300"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="flex items-center text-sm font-medium">
+      <span id="date-time" class="text-white"></span>
+    </div>
+  </div>
+
+  <header class="bg-white bg-opacity-90 py-4 px-6 border-b-4 border-red-900 relative">
+    <div class="absolute inset-0 bg-white bg-opacity-80"></div>
+    <div class="max-w-6xl mx-auto flex justify-between items-center relative z-10">
+      <img src="${rootPath}assets/logo-left.png" alt="NPGC Logo" class="responsive-logo" >
+      <div class="text-center flex-grow px-4">
+        <img src="${rootPath}assets/clg mid.png" alt="National Post Graduate College" class="mx-auto mb-2" style="max-width: 100%; height: auto;">   
+      </div>
+      <img src="${rootPath}assets/logo-right.png" alt="NPGC Right Logo" class="responsive-logo">
+    </div>
+  </header>
+
   <nav class="navbar">
     <div class="nav-container">
       <div class="menu-toggle" id="menu-toggle">
@@ -114,6 +137,8 @@
 
     // Initialize JavaScript functionality
     initInteractivity();
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
 
     // Inject CSS
     if (!document.querySelector('link[href="' + cssUrl + '"]')) {
@@ -137,6 +162,22 @@
         menuToggle.classList.toggle('active');
       };
     }
+  }
+
+  function updateDateTime() {
+    const dateTimeEl = document.getElementById('date-time');
+    if (!dateTimeEl) return;
+    const now = new Date();
+    const options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    };
+    dateTimeEl.textContent = now.toLocaleDateString('en-US', options);
   }
 
   function ensureDependencies() {
