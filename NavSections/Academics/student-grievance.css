@@ -1,0 +1,208 @@
+*{
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   HERO SECTION 
+   ========================= */
+.hero-section {
+    position: relative;
+    padding: 120px 0 80px 0;
+    background: url('') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gradient-overlay-v {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+    to right,
+    rgba(69, 10, 10, 0.8) 0%,
+    rgba(0, 0, 0, 0.75) 40%,
+    rgba(69, 10, 10, 0.8) 100%
+  );
+    z-index: 1;
+}
+
+.z-3 { z-index: 3 !important; }
+
+/* Typography */
+.main-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    font-size: clamp(4rem, 10vw, 7.5rem);
+    line-height: 0.85;
+    background: linear-gradient(to bottom, #ffffff 30%, #ff1f1f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -3px;
+}
+
+.main-description {
+    max-width: 650px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.btn-menu {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.4s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-menu:hover {
+    background: linear-gradient(to bottom, #ff5733 0%, #e64a19 100%) !important;
+    border-color: #ff5733;
+    color: #fff;
+    box-shadow: 0 8px 15px rgba(230, 74, 25, 0.4);
+}
+
+/* Section Container */
+.annual-reports-section {
+    padding: 60px 10%;
+    background: #f8f8f8;
+}
+
+.annual-reports-section h2 {
+    text-align: center;
+    color: #A71836;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+/* Reports Grid */
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Report Card */
+.report-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    border-left: 6px solid #A71836;
+}
+
+.report-card:hover {
+    transform: translateY(-10px);
+    background: #A71836;
+}
+
+.report-card:hover i,
+.report-card:hover h3 {
+    color: white;
+}
+
+.report-card:hover a {
+    background: white;
+    color: #A71836;
+}
+
+/* Icon */
+.report-card i {
+    font-size: 45px;
+    color: #A71836;
+    margin-bottom: 15px;
+}
+
+/* Title */
+.report-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Button */
+.report-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #A71836;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .reports-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .reports-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Responsive */
+@media (max-width: 1400px) {
+    .main-title {
+        font-size: clamp(3.1rem, 8vw, 7.5rem);
+        font-weight: 700;
+    }
+}
+/* =========================
+   MOBILE IMPROVEMENTS
+   ========================= */
+@media (max-width: 576px) {
+
+    /* Hero Section */
+    .hero-section {
+        padding: 90px 15px 60px;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .main-title {
+        font-size: clamp(1.8rem, 9vw, 4rem);
+        font-weight: 700;
+        line-height: 0.95;
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+    }
+
+    .main-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+
+    
+     /* HERO BUTTON WRAPPER */
+    .hero-section .d-flex {
+        flex-direction: column;
+        gap: 12px !important;
+        padding: 0 12px;
+    }
+
+    .btn-menu {
+        padding: 12px 28px!important;
+        font-size: 0.75rem;
+    }
+
+    /* HERO BUTTONS */
+    .hero-section .btn-menu {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 14px 0;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+}
