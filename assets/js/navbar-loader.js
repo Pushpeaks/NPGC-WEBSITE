@@ -65,7 +65,7 @@
             <li><a href="${rootPath}NavSections/AboutUs/About-us/vision-mission.html">Vision and Mission</a></li>
             <li><a href="${rootPath}NavSections/AboutUs/About-us/principal-desk.html">Principal's Desk</a></li>
             <li><a href="${rootPath}NavSections/Exam&Ass/Exam&Ass.html">Examination & Assessments</a></li>
-            <li><a href="#">Administrations and Committees</a></li>
+            <li><a href="${rootPath}./NavSections/Admissions/admission-procedure.html">Administrations and Committees</a></li>
             <li><a href="${rootPath}NavSections/AboutUs/About-us/annual_reports.html">Annual Reports</a></li>
             <li><a href="${rootPath}NavSections/AboutUs/About-us/accreditations-ranking.html">Accreditations & Ranking</a></li>
             <li><a href="${rootPath}NavSections/AboutUs/About-us/infrastructure.html">Infrastructure & Facilities</a></li>
@@ -87,7 +87,7 @@
             <li><a href="#">Prospectus</a></li>
             <li><a href="#">Admission Schedule</a></li>
             <li><a href="#">Eligibility Criteria</a></li>
-            <li><a href="#">Admission Procedure</a></li>
+            <li><a href="${rootPath}./NavSections/Admissions/admission-procedure.html">Admission Procedure</a></li>
             <li><a href="#">Seats Offered</a></li>
             <li><a href="#">Apply Online</a></li>
           </ul>
@@ -125,7 +125,7 @@
           <ul class="sub-menu">
             <li><a href="#">Online Fees Payment</a></li>
             <li><a href="${rootPath}NavSections/Syllabus/syllabus.html">Syllabus</a></li>
-            <li><a href="#">Student Grievance</a></li>
+            <li><a href="${rootPath}./NavSections/Academics/student-grievance.html">Student Grievance</a></li>
             <li><a href="#">Scholarships</a></li>
           </ul>
         </li>
