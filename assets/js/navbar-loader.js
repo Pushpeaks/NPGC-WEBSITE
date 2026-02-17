@@ -65,7 +65,7 @@
             <li><a href="${rootPath}NavSections/AboutUs/About-us/vision-mission.html">Vision and Mission</a></li>
             <li><a href="${rootPath}NavSections/AboutUs/About-us/principal-desk.html">Principal's Desk</a></li>
             <li><a href="${rootPath}NavSections/Exam&Ass/Exam&Ass.html">Examination & Assessments</a></li>
-            <li><a href="${rootPath}./NavSections/Admissions/admission-procedure.html">Administrations and Committees</a></li>
+            <li><a href="${rootPath}NavSections/AboutUs/About-us/administration.html">Administrations and Committees</a></li>
             <li><a href="${rootPath}NavSections/AboutUs/About-us/annual_reports.html">Annual Reports</a></li>
             <li><a href="${rootPath}NavSections/AboutUs/About-us/accreditations-ranking.html">Accreditations & Ranking</a></li>
             <li><a href="${rootPath}NavSections/AboutUs/About-us/infrastructure.html">Infrastructure & Facilities</a></li>

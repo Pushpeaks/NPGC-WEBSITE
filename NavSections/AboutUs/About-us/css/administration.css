@@ -1,0 +1,159 @@
+
+body,html{
+margin:0;
+padding:0;
+font-family:'Arial',sans-serif;
+background:#000;
+}
+
+.hero-section{
+position:relative;
+padding:120px 0 80px;
+background:url('./assets/Administration.png') no-repeat center/cover;
+min-height:100vh;
+display:flex;
+align-items:center;
+overflow:hidden;
+}
+
+.gradient-overlay-v{
+position:absolute;
+inset:0;
+background:linear-gradient(
+to right,
+rgba(69,10,10,0.8)0%,
+rgba(0,0,0,0.75)40%,
+rgba(69,10,10,0.8)100%);
+z-index:1;
+}
+
+.z-3{z-index:3!important;}
+
+.main-title{
+font-weight:900;
+font-size:clamp(4rem,10vw,7.5rem);
+line-height:.85;
+background:linear-gradient(to bottom,#ffffff 30%,#ff1f1f 100%);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+letter-spacing:-3px;
+}
+
+.main-description{
+max-width:650px;
+letter-spacing:.5px;
+}
+
+/* =========================
+   COMMITTEE SECTION
+========================= */
+.committee-section{
+background:#fff;
+}
+
+.committee-card{
+background:#fff;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+border:1px solid #f0f0f0;
+transition:.3s;
+height:100%;
+}
+
+.committee-card:hover{
+transform:translateY(-6px);
+border-color:#ff1f1f;
+box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+
+.committee-card h4{
+font-weight:700;
+margin-bottom:15px;
+text-transform:uppercase;
+}
+
+.committee-card ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.committee-card li{
+padding:10px 0;
+border-bottom:1px dashed #eee;
+cursor:pointer;
+font-weight:600;
+transition:.2s;
+}
+
+.committee-card li:hover{
+color:#ff1f1f;
+padding-left:6px;
+}
+
+.committee-card li:last-child{
+border-bottom:none;
+}
+
+/* =========================
+   POPOVER
+========================= */
+.popover{
+border-radius:15px;
+border:none;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.popover-body{
+display:flex;
+gap:12px;
+align-items:center;
+}
+
+.teacher-img{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media(max-width:576px){
+
+.hero-section{
+padding:90px 15px 60px;
+min-height:auto;
+text-align:center;
+}
+
+.main-title{
+font-size:clamp(2.5rem,9vw,4rem);
+font-weight:700;
+line-height:.95;
+letter-spacing:-1px;
+margin-bottom:15px;
+}
+
+.main-description{
+font-size:.95rem;
+line-height:1.6;
+padding:0 10px;
+margin-bottom:30px;
+}
+
+.committee-card{
+padding:18px;
+}
+
+.committee-card h4{
+font-size:1.05rem;
+}
+
+.committee-card li{
+font-size:.9rem;
+}
+}
